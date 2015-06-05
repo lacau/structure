@@ -12,7 +12,13 @@ app.factory('httpInterceptor', function($q, $rootScope){
 			if(numLoadings === 0)
 				$rootScope.$broadcast("loading_hide");
 			
-			return response || $q.when(response);;
-		}
+			return response || $q.when(response);
+		},
+		'responseError': function(response) {
+            if (!(--numLoadings))
+                $rootScope.$broadcast("loading_hide");
+
+            return $q.reject(response);
+        }
 	};
 });

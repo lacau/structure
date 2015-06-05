@@ -33,15 +33,6 @@ a:active {
     text-decoration: underline;
 }
 
-.github-link {
-	color: black;
-	font-size: 14px;
-	font-weight: bold;
-	margin-top: 20px;
-	margin-left: 5px;
-	text-align: left;
-}
-
 /* HEADER */
 .header-back {
 	width: 100%;
@@ -81,6 +72,15 @@ a:active {
 .header-link:hover {
 	cursor: pointer;
 	color: #D9EFF2;
+}
+
+.github-link {
+	color: black;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-left: 5px;
+	text-align: left;
 }
 
 /* FOOTER */

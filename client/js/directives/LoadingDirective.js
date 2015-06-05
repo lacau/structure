@@ -1,6 +1,6 @@
 app.directive('loading', ['$rootScope', function($rootScope) {
 	return {
-		template: "<div class='loading'></div>",
+		templateUrl: 'views/loading.html',
 		link: function(scope, element, attrs) {
 			$rootScope.$on('loading_show', function() {
 				element.removeClass('invisible');
