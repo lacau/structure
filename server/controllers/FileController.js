@@ -4,18 +4,18 @@ module.exports.list = function(req, res) {
 
 	if(req.params.name) {
 		fs.readFile('./' + req.params.name,'utf-8',function(err, data) {
-			console.log('error: ' + err);
-			console.log('data: ' + data);
 			res.json(data);
 		});
 		return;
 	}
 
+	var _exclusions = ['node_modules', '.git'];
+
 	var getFileStructure = function(files, name, currentFile) {
 		var _name = '/' + name;
-		var names = fs.readdirSync('.' + _name);
-		names.forEach(function(eachName) {
-			if(eachName.indexOf('node_modules') != -1)
+		var _names = fs.readdirSync('.' + _name);
+		_names.forEach(function(eachName) {
+			if(_exclusions.indexOf(eachName) != -1)
 				return;
 
 			var stat = fs.statSync('.' + _name + '/' + eachName);
