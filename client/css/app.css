@@ -10,6 +10,34 @@ body{
 	visibility: hidden;
 }
 
+a:link {
+	color: black;
+	font-weight: normal;
+    text-decoration: none;
+}
+
+a:visited {
+	color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+.github-link {
+	color: black;
+	font-size: 13px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-left: 5px;
+	text-align: left;
+}
+
 /* HEADER */
 .header-back {
 	width: 100%;

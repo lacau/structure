@@ -10,7 +10,7 @@ db.menu.insert({index: 5, label: 'Services'})
 db.menu.insert({index: 6, label: 'CSS'})
 db.menu.insert({index: 7, label: 'HTML'})
 
-db.config.insert({title: 'Structure Project', author: 'Leandro Lacau', year: 2015})
+db.config.insert({title: 'Structure Project', author: 'Leandro Lacau', year: 2015, github: 'https://github.com/lacau/structure'})
 
 db.page.insert({index: 0, title: 'Objective', description: 'description teste'})
 db.page.insert({index: 1, title: 'Architecture', description: 'description teste'})
