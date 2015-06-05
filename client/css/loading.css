@@ -1,0 +1,33 @@
+@keyframes loading {
+    to {transform: rotate(360deg);}
+}
+ 
+@-webkit-keyframes loading {
+    to {-webkit-transform: rotate(360deg);}
+}
+ 
+.loading {
+    min-width: 30px;
+    min-height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+ 
+.loading:before {
+    content: 'Loading…';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    z-index: 9999;
+}
+ 
+.loading:not(:required):before {
+    content: '';
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    border-top-color: #03ade0;
+    animation: loading .6s linear infinite;
+    -webkit-animation: loading .6s linear infinite;
+}
