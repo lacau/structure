@@ -5,6 +5,9 @@ app.config(function($routeProvider, $httpProvider) {
 		.when('/:name*',{
 			templateUrl: function(urlAttr) {
 				return '/views/' + urlAttr.name.toLowerCase() +'.html';
+			},
+			controller: function($scope, $routeParams, $resource, $controller) {
+				$controller($routeParams.name.toLowerCase() + 'Ctrl', {$scope:$scope, $resource:$resource});
 			}
 		});
 

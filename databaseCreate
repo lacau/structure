@@ -12,7 +12,7 @@ db.menu.insert({index: 7, label: 'HTML'})
 
 db.config.insert({title: 'Structure Project', author: 'Leandro Lacau', year: 2015, github: 'https://github.com/lacau/structure'})
 
-db.page.insert({index: 0, title: 'Objective', description: '<p>This project has been made to show how the author would code a MEAN application from scratch. Main goal is demonstrate some of this stack capabilities, going through angularJS directives, controllers, services, nodeJS modules, mongoDB access and so forth.</p><p>Another thing in mind when it was build, was that should be able to show its own source code by asking to server to read its own system folders and files.</p>'})
+db.page.insert({index: 0, title: 'Objective', description: '<p>This project has been made to show how the author would code a MEAN application from scratch. Main goal is demonstrate some of this stack capabilities, going through angularJS directives, controllers, services, nodeJS modules, mongoDB access and so forth.</p><p>Another thing in mind when it was build, was that should be able to show its own source code by asking to server to read its own system folders and files.</p><p>Every page, including this one, have a "(source code)" link that will show how current page was built.</p>'})
 db.page.insert({index: 1, title: 'Architecture', description: 'description teste'})
 db.page.insert({index: 2, title: 'Controllers', description: 'description teste'})
 db.page.insert({index: 3, title: 'Directives', description: 'description teste'})
