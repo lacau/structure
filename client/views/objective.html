@@ -1,5 +1,5 @@
 <div ng-controller="objectiveCtrl">
 	<div class="subtitle">{{title}}</div>
-	<div class="description description-objective">{{description}}</div>
+	<div ng-bind-html="description | sanitize" class="description description-objective"></div>
 </div>
 
