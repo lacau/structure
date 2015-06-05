@@ -1,6 +1,7 @@
 app.service('fileService', function(){
 	var _openFile = function(member) {
-		console.log(member);
+		if(!member.isDirectory)
+			console.log(member);
 	}
 
 	return {

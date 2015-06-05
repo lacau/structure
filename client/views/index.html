@@ -15,8 +15,8 @@
 			<div ng-click="switchView(menu.label, menu.index)">{{menu.label}}</div>
 		</div>
 	</div>
-	<loading></loading>
-	<div ng-if="!isRouteLoading" class="container" ng-view>
+	<div loading></div>
+	<div class="container" ng-view>
 	</div>
 	<div class="footer">
 		<div class="footer-text">
@@ -34,6 +34,7 @@
 	<script src="/js/directives/CollectionDirective.js"></script>
 	<script src="/js/directives/MemberDirective.js"></script>
 	<script src="/js/services/FileService.js"></script>
+	<script src="/js/services/HttpInterceptor.js"></script>
 	<script src="/js/directives/LoadingDirective.js"></script>
 	<script src="/js/filters/SanitizeFilter.js"></script>
 </body>
