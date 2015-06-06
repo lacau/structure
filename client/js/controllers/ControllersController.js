@@ -6,13 +6,13 @@ app.controller('controllersCtrl', function($scope, $resource) {
 
 	var Client = $resource('/api/file/client/js/controllers');
 	Client.query(function(result) {
-		$scope.clientControllers = result;
+		$scope.clientControllers = result[0];
 		$scope.clientChildren = result[0].children;
 	});
 
 	var Server = $resource('/api/file/server/controllers');
 	Server.query(function(result) {
-		$scope.serverControllers = result;
+		$scope.serverControllers = result[0];
 		$scope.serverChildren = result[0].children;
 	});
 });

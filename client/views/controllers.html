@@ -1,10 +1,10 @@
 <div>
 	<div class="subtitle">{{title}}</div>
-	<div class="folder-title">{{clientControllers[0].path}}</div>
+	<div class="folder-title">{{clientControllers.path}}</div>
 	<div ng-repeat="file in clientChildren">
 		<div class="archive archive-file file-ident"></div><div class="file-name file-link">{{file.name}}</div>
 	</div>
-	<div class="folder-title">{{serverControllers[0].path}}</div>
+	<div class="folder-title">{{serverControllers.path}}</div>
 	<div ng-repeat="file in serverChildren">
 		<div class="archive archive-file file-ident"></div><div class="file-name file-link">{{file.name}}</div>
 	</div>
