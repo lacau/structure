@@ -1,13 +1,24 @@
 var fs = require('fs');
 
 module.exports.list = function(req, res) {
+	var _initPath = req.params.path || '';
 
-	if(req.params.name) {
-		fs.readFile('./' + req.params.name,'utf-8',function(err, data) {
+	if(req.params['0'])
+		_initPath = req.params.path + req.params['0'];
+
+	if(_initPath.indexOf('\\.') != -1) {
+		fs.readFile('./' + req.params.path,'utf-8',function(err, data) {
 			res.json(data);
 		});
 		return;
 	}
+
+	var files = [];
+	if(_initPath) {
+		var name = _initPath.substring(_initPath.lastIndexOf('/'));
+		files.push({name: name, isDirectory: true, path: _initPath, children: []});
+	} else
+		files.push({name: 'structure', isDirectory: true, path: './', children: []});
 
 	var _exclusions = ['node_modules', '.git'];
 
@@ -21,7 +32,8 @@ module.exports.list = function(req, res) {
 			var stat = fs.statSync('.' + _name + '/' + eachName);
 			var file = {
 				name: eachName,
-				isDirectory: stat.isDirectory()
+				isDirectory: stat.isDirectory(),
+				path: _name.substring(1) + '/'
 			};
 
 			if(stat.isDirectory()) {
@@ -35,7 +47,7 @@ module.exports.list = function(req, res) {
 				files.push(file);
 		});
 	}
-	var files = [{name: 'Structure', isDirectory: true, children: []}];
-	getFileStructure(files[0].children, '', '');
+
+	getFileStructure(files[0].children, _initPath, '');
 	res.json(files);
 }

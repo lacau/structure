@@ -53,10 +53,36 @@
 	background-image: url("/images/file_blue.png");
 }
 
+.folder-title {
+	font-size: 15px;
+	font-weight: bold;
+	padding: 3px;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: #D9EFF2;
+	margin-left: 5%;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	width: 30%;
+	text-indent: 5px;
+}
+
 .file-name {
 	line-height: 22px;
 	font-size: 14px;
 	vertical-align: middle;
 	cursor: pointer;
 	display: inline-block;
+}
+
+.file-ident {
+	margin-left: 7%;
+}
+
+.file-link {
+    text-decoration: underline;
+}
+
+.file-link:hover {
+    text-decoration: none;
 }
