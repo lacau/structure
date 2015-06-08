@@ -16,4 +16,5 @@ app.controller('mainCtrl', function($scope, $resource, $location) {
 	}
 
 	$location.path($scope.switchView('objective', 0));
+	$scope.title = 'Index.html';
 });
