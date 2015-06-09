@@ -1,9 +1,9 @@
 <div>
-	<div class="subtitle">{{title}}</div><div source-code></div>
+	<div class="subtitle">{{page.title}}</div><div source-code></div>
 	<div class="left100Perc">
 		<div class="folder-title">{{filters.path}}</div>
 		<div ng-repeat="file in filtersChildren">
-			<div class="archive archive-file file-ident"></div><div class="file-name file-link">{{file.name}}</div>
+			<file-link file="file">
 		</div>
 	</div>
 </div>

@@ -1,14 +1,20 @@
 <div ng-controller="modalCtrl">
 	<script type="text/ng-template" id="modalContent.html">
         <div class="modal-header">
-            <h3 class="modal-title">{{title}}</h3>
+            <h3 class="modal-title">{{page.name}}</h3>
         </div>
-        <div class="modal-body">
-            
+        <div class="modal-body" style="white-space:nowrap;overflow-x:auto;max-height:500px;">
+            <div ng-repeat="row in page.sourceCodeRows">
+                <div style="display:inline-block">
+                    <div class="code-row-index">{{row.index}}</div>
+                    <div style="float:left" ng-bind-html="row.text | codeSpacer"></div>
+                    <div class="code-row-text">{{row.text}}</div>
+                </div>
+            </div>
         </div>
         <div class="modal-footer">
             <button class="btn btn-primary" ng-click="ok()">OK</button>
         </div>
 	</script>
-	<div class="source-code-link" ng-click="open(title)">(source code)</div>
+	<div class="source-code-link" ng-click="open(page)">(source code)</div>
 </div>

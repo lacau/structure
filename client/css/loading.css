@@ -1,5 +1,5 @@
 @keyframes loading {
-    to {transform: rotate(360deg);}
+        to {transform: rotate(360deg);}
 }
  
 @-webkit-keyframes loading {

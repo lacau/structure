@@ -80,9 +80,9 @@
 }
 
 .file-link {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .file-link:hover {
-    text-decoration: none;
+	text-decoration: none;
 }

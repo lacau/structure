@@ -1,7 +1,7 @@
 app.controller('modelsCtrl', function($scope, $resource) {
 	var Page = $resource('/api/page/' + $scope.indexMenu);
 	Page.get(function(result) {
-		$scope.title = result.title;
+		$scope.page = result;
 	});
 
 	var Model = $resource('/api/file/server/models');

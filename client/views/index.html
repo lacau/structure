@@ -9,7 +9,6 @@
 <body ng-controller="mainCtrl">
 	<div class="header-back">
 		<div class="header-title"># {{config.title}} #</div>
-		<div source-code></div>
 		<div class="github-link">github: <a href="{{config.github}}" target="_blank">{{config.github}}</a></div>
 	</div>
 	<div class="header-link-container">
@@ -48,6 +47,8 @@
 	<script src="/js/services/HttpInterceptor.js"></script>
 	<script src="/js/directives/LoadingDirective.js"></script>
 	<script src="/js/directives/SourceCodeDirective.js"></script>
+	<script src="/js/directives/FileLinkDirective.js"></script>
 	<script src="/js/filters/SanitizeFilter.js"></script>
+	<script src="/js/filters/CodeSpacerFilter.js"></script>
 </body>
 </html>

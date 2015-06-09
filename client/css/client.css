@@ -1,9 +1,9 @@
 /* GENERAL */
-body{
-    margin-bottom:50px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
+body {
+	margin-bottom:50px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
 }
 
 .invisible {
@@ -17,20 +17,20 @@ body{
 a:link {
 	color: black;
 	font-weight: normal;
-    text-decoration: none;
+	text-decoration: none;
 }
 
 a:visited {
 	color: black;
-    text-decoration: none;
+	text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 a:active {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .left100Perc {
@@ -101,17 +101,34 @@ a:active {
 	cursor: pointer;
 }
 
+/* MODAL */
+.code-row-index {
+	float: left;
+	display: inline;
+	border-right: 1px solid black;
+	width: 30px;
+	line-height: 22px;
+	text-align: right;
+	padding-right: 2px;
+}
+
+.code-row-text {
+	display: inline;
+	line-height: 22px;
+	margin-left: 10px;
+}
+
 /* FOOTER */
 .footer {
-    position:fixed;
-    height:50px;
-    background-color: #aaa;
-    bottom:0px;
-    left:0px;
-    right:0px;
-    margin-bottom:0px;
-    border-top: 2px solid black;
-    text-align: center;
+	position:fixed;
+	height:50px;
+	background-color: #aaa;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	margin-bottom:0px;
+	border-top: 2px solid black;
+	text-align: center;
 }
 
 .footer-text {

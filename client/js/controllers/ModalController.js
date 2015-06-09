@@ -1,30 +1,29 @@
-app.controller('modalCtrl', function ($scope, $modal, $log) {
-  $scope.open = function (title) {
-    console.log('title: ' + title);
-    var modalInstance = $modal.open({
-      animation: true,
-      templateUrl: 'modalContent.html',
-      controller: 'modalInstanceCtrl',
-      resolve: {
-        title: function () {
-          return title;
-        }
-      }
-    });
+app.controller('modalCtrl',['$scope', '$modal', 'fileService', function ($scope, $modal, fileService) {
+  $scope.open = function (page) {
+    if(!page.isDirectory) {
+      fileService.openFile(page);
 
-    modalInstance.result.then(function () {
-    }, function () {
-      $log.info('Modal dismissed at: ' + new Date());
-    });
+      var modalInstance = $modal.open({
+        animation: true,
+        templateUrl: 'modalContent.html',
+        controller: 'modalInstanceCtrl',
+        size: 'lg',
+        resolve: {
+          page: function () {
+            return page;
+          }
+        }
+      });
+    }
   };
 
   $scope.toggleAnimation = function () {
     $scope.animationsEnabled = !$scope.animationsEnabled;
   };
-});
+}]);
 
-app.controller('modalInstanceCtrl', function ($scope, $modalInstance, title) {
-  $scope.title = title + '.html';
+app.controller('modalInstanceCtrl', function ($scope, $modalInstance, page) {
+  $scope.page = page;
   $scope.ok = function () {
     $modalInstance.close();
   };
