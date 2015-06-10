@@ -5,11 +5,11 @@ app.service('fileService', function($resource){
 
 		var File = $resource('/api/file' + page.path + page.name);
 		File.get(function(result) {
-			var rows = [];
+			var _rows = [];
 			result.source.split('\n').forEach(function(element, index){
-				rows.push({index: index, text: element});
+				_rows.push({index: index, text: element});
 			});
-			page.sourceCodeRows = rows;
+			page.sourceCodeRows = _rows;
 		});
 	}
 
