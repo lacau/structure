@@ -1,5 +1,5 @@
-<div ng-controller="modalCtrl">
-	<script type="text/ng-template" id="modalContent.html">
+<div ng-controller="sourceCodeCtrl">
+	<script type="text/ng-template" id="sourceCodeContent.html">
 		<div class="modal-header">
 			<h3 class="modal-title">{{page.name}}</h3>
 		</div>
@@ -13,7 +13,7 @@
 			</div>
 		</div>
 		<div class="modal-footer">
-			<button class="btn btn-primary" ng-click="ok()">OK</button>
+			<button class="btn btn-primary" ng-click="close()">Close</button>
 		</div>
 	</script>
 	<div class="source-code-link" ng-click="open(page)">(source code)</div>

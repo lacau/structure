@@ -15,10 +15,10 @@ app.factory('httpInterceptor', function($q, $rootScope){
 			return response || $q.when(response);
 		},
 		'responseError': function(response) {
-            if (!(--numLoadings))
-                $rootScope.$broadcast("loading_hide");
-
-            return $q.reject(response);
-        }
+			if (!(--numLoadings))
+				$rootScope.$broadcast("loading_hide");
+			
+			return $q.reject(response);
+		}
 	};
 });
