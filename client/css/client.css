@@ -81,7 +81,6 @@ a:active {
 	color: black;
 	font-size: 14px;
 	font-weight: bold;
-	margin-top: 10px;
 	margin-left: 5px;
 	text-align: left;
 }
@@ -91,8 +90,7 @@ a:active {
 	color: black;
 	text-decoration: none;
 	display: inline-block;
-	float: left;
-	line-height: 50px;
+	line-height: 12px;
 }
 
 .source-code-link:hover {

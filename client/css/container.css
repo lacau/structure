@@ -30,7 +30,7 @@
 .container {
 	position:fixed;
 	bottom: 50px;
-	top: 96px;
+	top: 98px;
 	width: 100% !important;
 	background-color: #ddd;
 	overflow: auto;
@@ -85,4 +85,9 @@
 
 .file-link:hover {
 	text-decoration: none;
+}
+
+.source-code-container {
+	float: left;
+	margin-top: 20px;
 }

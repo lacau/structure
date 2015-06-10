@@ -7,6 +7,7 @@ app.controller('mainCtrl', function($scope, $resource, $location) {
 	});
 
 	Config.get(function(result) {
+		$scope.page = {name: 'index.html', path: '/client/views/'};
 		$scope.config = result;
 	});
 

@@ -6,8 +6,6 @@ module.exports.list = function(req, res) {
 	if(req.params['0'])
 		_initPath = req.params.path + req.params['0'];
 
-	console.log(_initPath);
-
 	if(_initPath.indexOf('.') != -1) {
 		fs.readFile('./' + _initPath,'utf-8',function(err, data) {
 			res.json({source: data});
