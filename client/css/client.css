@@ -6,6 +6,15 @@ body {
 	margin-top: 0px;
 }
 
+.github-link {
+	width: 90px;
+	height: 32px;
+	background-image: url("/images/fork-me-on-github.png");
+	background-size: 90px 32px;
+	position: fixed;
+	top: 50px;
+}
+
 .invisible {
 	display: none;
 }
@@ -45,6 +54,7 @@ a:active {
 	text-align: center;
 	padding-top: 10px;
 	margin: 0px;
+	padding-bottom: 15px;
 }
 
 .header-title {
