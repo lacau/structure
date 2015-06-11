@@ -2,7 +2,7 @@ app.service('fileService', function($resource){
 	var _imgExtensions =['png'];
 
 	var _openFile = function(page) {
-		if(!page.path.startsWith('/'))
+		if(!page.path.indexOf('/') == 0)
 			page.path = '/' + page.path;
 
 		var File = $resource('/api/file' + page.path + page.name);

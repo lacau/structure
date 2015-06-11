@@ -54,7 +54,15 @@ a:active {
 	padding-top: 10px;
 	margin: 0px;
 	padding-bottom: 15px;
-	background: -webkit-linear-gradient(top, rgb(180,180,180) 0%,rgb(130,130,130) 90%,rgb(50,50,50) 100%);
+	background: -webkit-linear-gradient(top, rgb(180,180,180) 0%,
+											rgb(130,130,130) 90%,
+											rgb(50,50,50) 100%);
+	background: -moz-linear-gradient(top, rgb(180,180,180) 0%,
+											rgb(130,130,130) 90%,
+											rgb(50,50,50) 100%);
+	background: -ms-linear-gradient(top, rgb(180,180,180) 0%,
+											rgb(130,130,130) 90%,
+											rgb(50,50,50) 100%);
 }
 
 .header-title {
@@ -69,6 +77,24 @@ a:active {
 	background-color: #555;
 	text-align: center;
 	background: -webkit-linear-gradient(top, rgb(40,40,40) 0%,
+											rgb(0,0,0) 5%,
+											rgb(40,40,40) 10%,
+											rgb(85,85,85) 20%,
+											rgb(0,0,0) 50%,
+											rgb(85,85,85) 80%,
+											rgb(40,40,40) 90%,
+											rgb(0,0,0) 95%,
+											rgb(220,220,220) 100%);
+	background: -moz-linear-gradient(top, rgb(40,40,40) 0%,
+											rgb(0,0,0) 5%,
+											rgb(40,40,40) 10%,
+											rgb(85,85,85) 20%,
+											rgb(0,0,0) 50%,
+											rgb(85,85,85) 80%,
+											rgb(40,40,40) 90%,
+											rgb(0,0,0) 95%,
+											rgb(220,220,220) 100%);
+	background: -ms-linear-gradient(top, rgb(40,40,40) 0%,
 											rgb(0,0,0) 5%,
 											rgb(40,40,40) 10%,
 											rgb(85,85,85) 20%,
@@ -148,7 +174,15 @@ a:active {
 	margin-bottom:0px;
 	border-top: 2px solid black;
 	text-align: center;
-	background: -webkit-linear-gradient(top, rgb(40,40,40) 0%, rgb(170,170,170) 15%, rgb(170,170,170) 100%);
+	background: -webkit-linear-gradient(top, rgb(40,40,40) 0%,
+											rgb(170,170,170) 15%,
+											rgb(170,170,170) 100%);
+	background: -moz-linear-gradient(top, rgb(40,40,40) 0%,
+											rgb(170,170,170) 15%,
+											rgb(170,170,170) 100%);
+	background: -ms-linear-gradient(top, rgb(40,40,40) 0%,
+											rgb(170,170,170) 15%,
+											rgb(170,170,170) 100%);
 }
 
 .footer-text {
