@@ -1,11 +1,11 @@
 app.controller('mainCtrl', function($scope, $resource, $location) {
-	var Menu = $resource('/api/menu');
-	Menu.query(function(result) {
+	var _menu = $resource('/api/menu');
+	_menu.query(function(result) {
 		$scope.menus = result;
 	});
 
-	var Config = $resource('/api/config');
-	Config.get(function(result) {
+	var _config = $resource('/api/config');
+	_config.get(function(result) {
 		$scope.page = {name: 'index.html', path: '/client/views/'};
 		$scope.config = result;
 	});

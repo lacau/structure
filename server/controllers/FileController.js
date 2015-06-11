@@ -18,7 +18,7 @@ module.exports.list = function(req, res) {
 		var name = _initPath.substring(_initPath.lastIndexOf('/'));
 		files.push({name: name, isDirectory: true, path: _initPath, children: []});
 	} else
-		files.push({name: 'structure', isDirectory: true, path: './', children: []});
+		files.push({name: 'structure',isDirectory: true, path: './', children: []});
 
 	var _exclusions = ['node_modules', '.git'];
 

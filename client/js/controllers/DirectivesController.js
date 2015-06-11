@@ -1,11 +1,11 @@
 app.controller('directivesCtrl', function($scope, $resource) {
-	var Page = $resource('/api/page/' + $scope.indexMenu);
-	Page.get(function(result) {
+	var _page = $resource('/api/page/' + $scope.indexMenu);
+	_page.get(function(result) {
 		$scope.page = result;
 	});
 
-	var Directive = $resource('/api/file/client/js/directives');
-	Directive.query(function(result) {
+	var _directive = $resource('/api/file/client/js/directives');
+	_directive.query(function(result) {
 		$scope.directives = result[0];
 		$scope.directivesChildren = result[0].children;
 	});

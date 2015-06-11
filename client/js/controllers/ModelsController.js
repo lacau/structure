@@ -1,11 +1,11 @@
 app.controller('modelsCtrl', function($scope, $resource) {
-	var Page = $resource('/api/page/' + $scope.indexMenu);
-	Page.get(function(result) {
+	var _page = $resource('/api/page/' + $scope.indexMenu);
+	_page.get(function(result) {
 		$scope.page = result;
 	});
 
-	var Model = $resource('/api/file/server/models');
-	Model.query(function(result) {
+	var _model = $resource('/api/file/server/models');
+	_model.query(function(result) {
 		$scope.models = result[0];
 		$scope.modelsChildren = result[0].children;
 	});

@@ -1,7 +1,7 @@
-var Menu = require('../models/MenuModel');
+var menu = require('../models/MenuModel');
 
 module.exports.list = function(req, res) {
-	Menu.find({}, function(err, results) {
+	menu.find({}, function(err, results) {
 		res.json(results);
 	});
 }

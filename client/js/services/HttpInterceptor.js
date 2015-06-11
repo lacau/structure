@@ -1,21 +1,21 @@
 app.factory('httpInterceptor', function($q, $rootScope){
-	var numLoadings = 0;
+	var _numLoadings = 0;
 	return {
 		'request': function(config) {
-			numLoadings++;
+			_numLoadings++;
 			$rootScope.$broadcast("loading_show");
 			
 			return config || $q.when(config);
 		},
 		'response': function(response) {
-			numLoadings--;
-			if(numLoadings === 0)
+			_numLoadings--;
+			if(_numLoadings === 0)
 				$rootScope.$broadcast("loading_hide");
 			
 			return response || $q.when(response);
 		},
 		'responseError': function(response) {
-			if (!(--numLoadings))
+			if (!(--_numLoadings))
 				$rootScope.$broadcast("loading_hide");
 			
 			return $q.reject(response);
