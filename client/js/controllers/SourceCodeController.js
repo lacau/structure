@@ -1,7 +1,10 @@
 app.controller('sourceCodeCtrl', function ($scope, $modal, fileService) {
 	$scope.open = function (page) {
 		if(!page.isDirectory) {
-			fileService.openFile(page);
+			page.isImage = fileService.isImage(page.name);
+			
+			if(!page.isImage)
+				fileService.openFile(page);
 
 			var modalInstance = $modal.open({
 				animation: true,

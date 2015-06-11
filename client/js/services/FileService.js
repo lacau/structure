@@ -1,4 +1,6 @@
 app.service('fileService', function($resource){
+	var _imgExtensions =['png'];
+
 	var _openFile = function(page) {
 		if(!page.path.startsWith('/'))
 			page.path = '/' + page.path;
@@ -13,7 +15,13 @@ app.service('fileService', function($resource){
 		});
 	}
 
+	var _isImage = function(name) {
+		var _ext = name.substring(name.indexOf('.') + 1);
+		return _imgExtensions.indexOf(_ext) != -1;
+	}
+
 	return {
-		openFile: _openFile
+		openFile: _openFile,
+		isImage: _isImage
 	}
 });

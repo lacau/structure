@@ -126,6 +126,10 @@ a:active {
 	margin-left: 10px;
 }
 
+.code-img {
+	text-align: center;
+}
+
 /* FOOTER */
 .footer {
 	position:fixed;
