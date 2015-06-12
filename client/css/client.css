@@ -204,22 +204,26 @@ a:active {
 	right:0px;
 	margin-bottom:0px;
 	border-top: 2px solid black;
+	padding-top: 2px;
 	text-align: center;
 	background: -webkit-linear-gradient(top, rgb(40,40,40) 0%,
-											rgb(170,170,170) 15%,
-											rgb(170,170,170) 100%);
+											rgb(170,170,170) 20%,
+											rgb(170,170,170) 80%,
+											rgb(0,0,0) 100%);
 	background: -moz-linear-gradient(top, rgb(40,40,40) 0%,
-											rgb(170,170,170) 15%,
-											rgb(170,170,170) 100%);
+											rgb(170,170,170) 20%,
+											rgb(170,170,170) 80%,
+											rgb(0,0,0) 100%);
 	background: -ms-linear-gradient(top, rgb(40,40,40) 0%,
-											rgb(170,170,170) 15%,
-											rgb(170,170,170) 100%);
+											rgb(170,170,170) 20%,
+											rgb(170,170,170) 80%,
+											rgb(0,0,0) 100%);
 }
 
 .footer-text {
 	font-size: 12px;
 	font-family: monospace;
 	font-weight: bold;
-	color: #555;
+	color: #222;
 	margin: 5px;
 }
