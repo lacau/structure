@@ -55,12 +55,15 @@ a:active {
 	margin: 0px;
 	padding-bottom: 15px;
 	background: -webkit-linear-gradient(top, rgb(180,180,180) 0%,
+											rgb(180,180,180) 50%,
 											rgb(130,130,130) 90%,
 											rgb(50,50,50) 100%);
 	background: -moz-linear-gradient(top, rgb(180,180,180) 0%,
+											rgb(180,180,180) 50%,
 											rgb(130,130,130) 90%,
 											rgb(50,50,50) 100%);
 	background: -ms-linear-gradient(top, rgb(180,180,180) 0%,
+											rgb(180,180,180) 50%,
 											rgb(130,130,130) 90%,
 											rgb(50,50,50) 100%);
 }
@@ -70,6 +73,22 @@ a:active {
 	font-weight: bold;
 	font-family: monospace;
 	color: #555;
+	display: inline;
+	background: -webkit-linear-gradient(top, rgb(180,180,180) 0%,
+											rgb(180,180,180) 25%,
+											rgb(230,230,230) 50%,
+											rgb(180,180,180) 75%,
+											rgb(180,180,180) 100%);
+	background: -moz-linear-gradient(top, rgb(180,180,180) 0%,
+											rgb(180,180,180) 25%,
+											rgb(230,230,230) 50%,
+											rgb(180,180,180) 75%,
+											rgb(180,180,180) 100%);
+	background: -ms-linear-gradient(top, rgb(180,180,180) 0%,
+											rgb(180,180,180) 25%,
+											rgb(230,230,230) 50%,
+											rgb(180,180,180) 75%,
+											rgb(180,180,180) 100%);
 }
 
 .header-link-container {
@@ -161,6 +180,17 @@ a:active {
 
 .code-img {
 	text-align: center;
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: #555;
+	border-color: #555;
+}
+
+.btn-primary:hover {
+	color: #9BD5DD;
+	background-color: #555;
 }
 
 /* FOOTER */
