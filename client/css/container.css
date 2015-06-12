@@ -36,6 +36,18 @@
 	width: 100% !important;
 	background-color: #ddd;
 	overflow: auto;
+	background: -webkit-linear-gradient(top, rgb(150,150,150) 0%,
+											rgb(220,220,220) 5%,
+											rgb(220,220,220) 90%,
+											rgb(150,150,150) 100%);
+	background: -moz-linear-gradient(top, rgb(150,150,150) 0%,
+											rgb(220,220,220) 5%,
+											rgb(220,220,220) 90%,
+											rgb(150,150,150) 100%);
+	background: -ms-linear-gradient(top, rgb(150,150,150) 0%,
+											rgb(220,220,220) 5%,
+											rgb(220,220,220) 90%,
+											rgb(150,150,150) 100%);
 }
 
 .archive {
