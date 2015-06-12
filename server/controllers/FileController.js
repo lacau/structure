@@ -9,7 +9,7 @@ module.exports.list = function(req, res) {
 	var _exclusions = ['node_modules', '.git'];
 	for(var i = 0; i < _exclusions.length; i++)
 		if(_initPath.indexOf(_exclusions[i]) != -1) {
-			res.send(403);
+			res.sendStatus(403);
 			return;
 		}
 
