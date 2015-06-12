@@ -191,6 +191,7 @@ a:active {
 .btn-primary:hover {
 	color: #9BD5DD;
 	background-color: #555;
+	border-color: #9BD5DD;
 }
 
 /* FOOTER */
