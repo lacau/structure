@@ -15,12 +15,13 @@
 	border: 1px solid black;
 	background-color: #D9EFF2;
 	float: left;
+	width: 90%;
+	margin-bottom: 15px;
 }
 
 .description-objective {
 	margin-left: 5%;
 	margin-right: 5%;
-	margin-top: 15px;
 }
 
 .description-architecture {
