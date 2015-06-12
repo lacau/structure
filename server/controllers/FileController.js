@@ -6,6 +6,13 @@ module.exports.list = function(req, res) {
 	if(req.params['0'])
 		_initPath = req.params.path + req.params['0'];
 
+	var _exclusions = ['node_modules', '.git'];
+	for(var i = 0; i < _exclusions.length; i++)
+		if(_initPath.indexOf(_exclusions[i]) != -1) {
+			res.send(403);
+			return;
+		}
+
 	if(_initPath.indexOf('.') != -1) {
 		fs.readFile('./' + _initPath,'utf-8',function(err, data) {
 			res.json({source: data});
@@ -19,8 +26,6 @@ module.exports.list = function(req, res) {
 		files.push({name: name, isDirectory: true, path: _initPath, children: []});
 	} else
 		files.push({name: 'structure',isDirectory: true, path: './', children: []});
-
-	var _exclusions = ['node_modules', '.git'];
 
 	var getFileStructure = function(files, name, currentFile) {
 		var _name = '/' + name;
