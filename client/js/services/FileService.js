@@ -1,4 +1,4 @@
-app.service('fileService', function($resource){
+app.service('fileService', function($resource) {
 	var _imgExtensions =['png'];
 
 	var _openFile = function(page) {
