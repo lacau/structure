@@ -1,56 +1,14 @@
 app.controller('analysisCtrl', function($scope, $resource) {
-	var _page = $resource('/api/page/' + $scope.indexMenu);
-	_page.get(function(result) {
-		$scope.page = result;
-	});
+    var _page = $resource('/api/page/' + $scope.indexMenu);
+    _page.get(function(result) {
+        $scope.page = result;
+    });
 
-	$scope.basicAreaChart = {
-	"title": {
-    "text": "My text"
-  },
-  "subtitle": {
-    "text": "Subtitle"
-  },
-  "xAxis": {
-    "labels": {}
-  },
-  "tooltip": {},
-  "plotOptions": {
-    "area": {
-      "pointStart": 1940,
-      "marker": {
-        "enabled": false,
-        "symbol": "circle",
-        "radius": 2,
-        "states": {
-          "hover": {
-            "enabled": true
-          }
-        }
-      }
-    }
-  },
-  "series": [
-    {
-      "name": "Lacau",
-      "data": [
-        400,
-        194,
-        301,
-        130,
-        300
-      ]
-    },
-    {
-      "name": "Teste",
-      "data": [
-        123,
-        325,
-        120,
-        300,
-        300
-      ]
-    }
-    ]
-	};
+    var _file = $resource('/api/file');
+    _file.query(function(result) {
+        var _analysis = $resource('/api/analysis');
+        _analysis.query(result, function(_data) {
+            $scope.basicAreaChart = _data[0];
+        }); 
+    });
 });
