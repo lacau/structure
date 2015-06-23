@@ -24,6 +24,7 @@ module.exports.list = function(req, res) {
 
 	var _analyseFile = function(path) {
         var data = fs.readFileSync('./' + path, 'utf-8');
+        var size = fs.statSync('./' + path)['size'];
         var lines = data.split('\n');
         lines.forEach(function(line) {
             if(line.trim())
