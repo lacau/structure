@@ -8,7 +8,8 @@ app.controller('analysisCtrl', function($scope, $resource) {
     _file.query(function(result) {
         var _analysis = $resource('/api/analysis');
         _analysis.query(result, function(_data) {
-            $scope.basicChart = _data[0];
+            $scope.analysisTable = _data[0].analysisTable;
+            $scope.basicChart = _data[0].columnChart;
         }); 
     });
 });

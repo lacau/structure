@@ -105,3 +105,31 @@
 	float: left;
 	margin-top: 20px;
 }
+
+.table {
+	width: 100%;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.table-header {
+	width: 100%;
+	float: left;
+	text-align: center;
+	border: 1px solid #777;
+	background-color: #777;
+}
+
+.table-row {
+	width: 100%;
+	float: left;
+	text-align: center;
+	border: 1px solid #777;
+	border-top: 0px;
+}
+
+.table-cell {
+	width: 20%;
+	float: left;
+	color: black;
+}
