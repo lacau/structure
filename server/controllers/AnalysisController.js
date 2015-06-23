@@ -7,6 +7,8 @@ module.exports.list = function(req, res) {
     var lineCodeCount = 0;
     var functionCount = 0;
     var cssFileCount = 0;
+    var cssFileSize = 0;
+    var cssLineCount = 0;
     var htmlFileCount = 0;
     var jsFileCount = 0;
     var pngFileCount = 0;
@@ -34,7 +36,11 @@ module.exports.list = function(req, res) {
         var f = data.match(/function\(/g);
         functionCount += f ? f.length : 0;
         var css = path.match(/\.css/g);
-        cssFileCount += css ? css.length : 0;
+        if(css) {
+            cssFileCount += css.length;
+            cssFileSize += size;
+            cssLineCount += lines.length;
+        }
         var html = path.match(/\.html/g);
         htmlFileCount += html ? html.length : 0;
         var js = path.match(/\.js/g);
@@ -48,7 +54,7 @@ module.exports.list = function(req, res) {
     function _createAnalysisTable() {
         var _header = ['File type', 'Quantity', 'Lines of code', 'Average size(Kb)'];
         _table.header = _header;
-        _table.rows.push(['CSS', cssFileCount, 0, 1]);
+        _table.rows.push(['CSS', cssFileCount, cssLineCount, (cssFileSize / cssFileCount / 1024).toFixed(2)]);
         _table.rows.push(['HTML', htmlFileCount, 0, 1]);
         _table.rows.push(['JS', jsFileCount, 0, 2]);
         _table.rows.push(['PNG', pngFileCount, 0, 2]);
