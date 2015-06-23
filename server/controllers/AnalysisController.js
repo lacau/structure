@@ -6,11 +6,10 @@ module.exports.list = function(req, res) {
     var lineCount = 0;
     var lineCodeCount = 0;
     var functionCount = 0;
-    var variableCount = 0;
-    var ifCount = 0;
-    var forCount = 0;
-    var angularControllerCount = 0;
-    var angularDirectiveCount = 0;
+    var cssFileCount = 0;
+    var htmlFileCount = 0;
+    var jsFileCount = 0;
+    var pngFileCount = 0;
     var _table = { header: [], rows: [] };
 
     var _iterateFiles = function(file) {
@@ -19,7 +18,7 @@ module.exports.list = function(req, res) {
                 _iterateFiles(child);
             });
         } else {
-            _analyseFile(file.path + file.name);            
+            _analyseFile(file.path + file.name);
         }
     }
 
@@ -33,29 +32,25 @@ module.exports.list = function(req, res) {
         lineCount += lines.length;
         var f = data.match(/function\(/g);
         functionCount += f ? f.length : 0;
-        var v = data.match(/var\s/g);
-        variableCount += v ? v.length : 0;
-        var i = data.match(/if\(/g);
-        ifCount += i ? i.length : 0;
-        var fo = data.match(/for\(/g);
-        forCount += fo ? fo.length : 0;
-        fo = data.match(/forEach\(/g);
-        forCount += fo ? fo.length : 0;
-        var ac = data.match(/app\.controller\(/g);
-        angularControllerCount += ac ? ac.length : 0;
-        var ad = data.match(/app\.directive\(/g);
-        angularDirectiveCount += ad ? ad.length : 0;
+        var css = path.match(/\.css/g);
+        cssFileCount += css ? css.length : 0;
+        var html = path.match(/\.html/g);
+        htmlFileCount += html ? html.length : 0;
+        var js = path.match(/\.js/g);
+        jsFileCount += js ? js.length : 0;
+        var png = path.match(/\.png/g);
+        pngFileCount += png ? png.length : 0;
 
         fileCount++;
 	}
 
     function _createAnalysisTable() {
-        var _header = ['Path', 'Files', 'Lines', 'Lines of code', 'JS Functions'];
+        var _header = ['File type', 'Quantity', 'Lines of code', 'Average size(Kb)'];
         _table.header = _header;
-        _table.rows.push(_header);
-        _table.rows.push(_header);
-        _table.rows.push(_header);
-        _table.rows.push(_header);
+        _table.rows.push(['CSS', cssFileCount, 0, 1]);
+        _table.rows.push(['HTML', htmlFileCount, 0, 1]);
+        _table.rows.push(['JS', jsFileCount, 0, 2]);
+        _table.rows.push(['PNG', pngFileCount, 0, 2]);
     }
 
     _iterateFiles(fileList);
