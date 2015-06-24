@@ -92,7 +92,7 @@ module.exports.list = function(req, res) {
 			_totalSizeSum += parseFloat(row[4]);
 		});
 		footer.push(_sizeSum);
-		footer.push(_totalSizeSum);
+		footer.push(_totalSizeSum.toFixed(2));
 
 		return footer;
 	}
