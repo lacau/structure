@@ -8,9 +8,12 @@
 		<div class="table-row" ng-repeat="row in analysisTable.rows">
 			<div class="table-cell" ng-repeat="cell in row">{{cell}}</div>
 		</div>
-	</div>
-	<div>
-		<chart value='basicChart' height="350" chart-obj='chartObj'>
-		</chart>
+		<div class="table-footer">
+			<div class="table-cell" ng-repeat="cell in analysisTable.footer">{{cell}}</div>
+		</div>
+		<div class="table-chart">
+			<chart value='basicChart' height="350" width="1000" chart-obj='chartObj'>
+			</chart>
+		</div>
 	</div>
 </div>
