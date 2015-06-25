@@ -13,6 +13,12 @@ body {
 	background-size: 90px 32px;
 	position: fixed;
 	top: 50px;
+	margin-left: 5px;
+}
+
+.github-link:hover {
+	opacity: 0.8;
+    filter: alpha(opacity=80);
 }
 
 .invisible {
@@ -137,14 +143,6 @@ a:active {
 .header-link:hover {
 	cursor: pointer;
 	color: #9BD5DD;
-}
-
-.github-link {
-	color: black;
-	font-size: 14px;
-	font-weight: bold;
-	margin-left: 5px;
-	text-align: left;
 }
 
 .source-code-link {
