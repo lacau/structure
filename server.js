@@ -25,6 +25,7 @@ app.use('/js', express.static(__dirname + '/client/js'));
 app.use('/css', express.static(__dirname + '/client/css'));
 app.use('/views', express.static(__dirname + '/client/views'));
 app.use('/images', express.static(__dirname + '/client/images'));
+app.use('/modules', express.static(__dirname + '/node_modules'));
 
 // Listen
 app.listen(3000, function() {
