@@ -85,13 +85,13 @@ module.exports.list = function(req, res) {
 		var footer = ['Total'];
 		footer.push(cssFileCount + htmlFileCount + jsFileCount + pngFileCount);
 		footer.push(cssLineCount + htmlLineCount + jsLineCount);
-		var _sizeSum = 0;
+		var _averageSizeSum = 0;
 		var _totalSizeSum = 0;
 		rows.forEach(function(row) {
-			_sizeSum += parseFloat(row[3]);
+			_averageSizeSum += parseFloat(row[3]);
 			_totalSizeSum += parseFloat(row[4]);
 		});
-		footer.push(_sizeSum);
+		footer.push(_averageSizeSum.toFixed(2));
 		footer.push(_totalSizeSum.toFixed(2));
 
 		return footer;
