@@ -1,0 +1,11 @@
+<div class="table">
+	<div class="table-header">
+		<div class="table-cell" style="color:#ccc" ng-repeat="cell in data.header">{{cell}}</div>
+	</div>
+	<div class="table-row" ng-repeat="row in data.rows">
+		<div class="table-cell" ng-repeat="cell in row">{{cell}}</div>
+	</div>
+	<div class="table-footer">
+		<div class="table-cell" ng-repeat="cell in data.footer">{{cell}}</div>
+	</div>
+</div>

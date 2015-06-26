@@ -66,7 +66,7 @@ module.exports.list = function(req, res) {
 		fileCount++;
 	}
 
-	function _createAnalysisTable() {
+	function _createOverviewTable() {
 		var table = {
 			rows: []
 		};
@@ -106,10 +106,10 @@ module.exports.list = function(req, res) {
 	}
 
 	_iterateFiles(fileList);
-	var _table = _createAnalysisTable();
+	var _overviewTable = _createOverviewTable();
 
 	var data = {
-		analysisTable: _table,
+		overviewTable: _overviewTable,
 		columnChart: {
 			chart: {
 				type: 'column'
@@ -120,7 +120,6 @@ module.exports.list = function(req, res) {
 			subtitle: {
 				text: ''
 			},
-			//colors: ['#7cb5ec', '#7cb5ec', '#7cb5ec', '#7cb5ec'],
 			xAxis: {
 				categories: [
 					'Statictics'

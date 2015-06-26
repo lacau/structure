@@ -2,20 +2,10 @@
 	<div class="subtitle">{{page.title}}</div>
 	<div class="source-code-container"><div source-code></div></div>
 	<div ng-bind-html="page.description | sanitize" class="description"></div>
-	<div class="table">
-		<div class="table-header">
-			<div class="table-cell" style="color:#ccc" ng-repeat="cell in analysisTable.header">{{cell}}</div>
-		</div>
-		<div class="table-row" ng-repeat="row in analysisTable.rows">
-			<div class="table-cell" ng-repeat="cell in row">{{cell}}</div>
-		</div>
-		<div class="table-footer">
-			<div class="table-cell" ng-repeat="cell in analysisTable.footer">{{cell}}</div>
-		</div>
-		<div class="table-chart">
-			<chart value='basicChart' height="350" chart-obj='chartObj'>
-			</chart>
-		</div>
+	<div structure-table data="overviewTable"/>
+	<div class="table-chart">
+		<chart value='basicChart' height="350" chart-obj='chartObj'>
+		</chart>
 	</div>
 	<div style="float:left;height:10%;width:100%"></div>
 </div>
